@@ -3,3 +3,5 @@
 docker build -t alxprd/pagekite -f docker/Dockerfile.pagekite ./docker
 
 docker build -t alxprd/ssh-client -f docker/Dockerfile.ssh-client ./docker
+
+docker build -t alxprd/vpn-client -f docker/Dockerfile.vpn-client ./docker

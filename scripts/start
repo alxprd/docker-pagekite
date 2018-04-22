@@ -1,8 +1,12 @@
 #!/bin/bash
 
-service ssh start
-
 echo "Set SSH password:"
 passwd user0
 
-pagekite /web $1.pagekite.me AND 22 ssh:$1.pagekite.me
+service ssh start
+
+openvpn --config ~/server.conf &
+
+pagekite --add /web $1.pagekite.me AND 22 ssh:$1.pagekite.me AND 1194 raw:$1.pagekite.me:1194
+
+pagekite

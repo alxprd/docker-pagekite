@@ -1,3 +1,0 @@
-#!/bin/bash
-
-docker run --rm -it alxprd/ssh-client ssh user0@$1.pagekite.me -o "ProxyCommand=nc -X connect -x %h:443 %h %p"

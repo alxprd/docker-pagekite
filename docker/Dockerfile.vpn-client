@@ -2,6 +2,6 @@ FROM debian:stretch
 
 RUN apt-get update
 
-RUN apt-get install -y openssh-client netcat-openbsd
+RUN apt-get install -y openvpn
 
 WORKDIR /root

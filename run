@@ -1,14 +1,9 @@
 #!/bin/bash
 
-if [ $# != 1 ]; then
-    echo "Pagekite name missing ..."
-    exit 1
-fi
-
 docker run --rm -it \
     -v $PWD/user/:/root/ \
     -v $PWD/web/:/web/ \
     -v $PWD/scripts/:/scripts/ \
     --cap-add=NET_ADMIN \
     --device=/dev/net/tun \
-    alxprd/pagekite /scripts/start $1
+    alxprd/pagekite

@@ -19,6 +19,9 @@ RUN apt-get install -y pagekite
 # Install SSH server
 RUN apt-get install -y openssh-server
 
+# Install OpenVPN
+RUN apt-get install -y openvpn
+
 # Adds user0 for SSH
 RUN useradd -ms /bin/bash user0
 # Creates a home directory for the user and ensures
@@ -26,4 +29,4 @@ RUN useradd -ms /bin/bash user0
 #USER user0
 #WORKDIR /home/user0
 
-#CMD service ssh start && echo "Set SSH password:" && passwd user0 && pagekite
+WORKDIR /root
