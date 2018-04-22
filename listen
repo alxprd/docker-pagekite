@@ -11,4 +11,5 @@ docker run --rm -it \
     -v $PWD/scripts/:/scripts/ \
     --cap-add=NET_ADMIN \
     --device=/dev/net/tun \
+    --name pagekite \
     alxprd/pagekite /scripts/start $1

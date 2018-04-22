@@ -4,5 +4,6 @@ docker run --rm -it \
     -v $PWD/user/:/root/ \
     --cap-add=NET_ADMIN \
     --device=/dev/net/tun \
-    alxprd/openvpn-client \
+    --name vpn-client \
+    alxprd/vpn-client \
     openvpn --config client.conf
