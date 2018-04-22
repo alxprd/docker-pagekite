@@ -1,0 +1,8 @@
+#!/bin/bash
+
+service ssh start
+
+echo "Set SSH password:"
+passwd user0
+
+pagekite /web $1.pagekite.me AND 22 ssh:$1.pagekite.me
