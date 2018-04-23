@@ -2,7 +2,7 @@ FROM debian:stretch
 
 RUN apt-get update
 
-RUN apt-get install -y curl
+RUN apt-get install -y curl python
 
 RUN curl -O https://pagekite.net/pk/pagekite.py
 

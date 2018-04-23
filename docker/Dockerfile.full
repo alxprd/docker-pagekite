@@ -14,5 +14,3 @@ RUN useradd -ms /bin/bash user0
 #WORKDIR /home/user0
 
 WORKDIR /root
-
-RUN apt-get install -y python
