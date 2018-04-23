@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ $# != 1 ]; then
-    echo "Pagekite name missing ..."
+if [ $# != 2 ]; then
+    echo "Pagekite name or web password missing... (ex. listen kitename password)"
     exit 1
 fi
 
@@ -12,4 +12,4 @@ docker run --rm -it \
     --cap-add=NET_ADMIN \
     --device=/dev/net/tun \
     --name pagekite \
-    alxprd/pagekite /scripts/start $1
+    alxprd/pagekite /scripts/start $1 $2
