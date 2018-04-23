@@ -1,0 +1,32 @@
+FROM debian:stretch
+
+# Required (at least on Raspbian) to support key-ring import
+RUN apt-get update
+RUN apt-get install -y dirmngr
+
+# Add our repository to /etc/apt/sources.list
+RUN echo deb http://pagekite.net/pk/deb/ pagekite main | tee -a /etc/apt/sources.list
+
+# Add the PageKite packaging key to your key-ring
+RUN apt-key adv --recv-keys --keyserver keys.gnupg.net AED248B1C7B2CAC3
+
+# Refresh your package sources by issuing
+RUN apt-get update
+
+# Install pagekite!
+RUN apt-get install -y pagekite
+
+# Install SSH server
+RUN apt-get install -y openssh-server
+
+# Install OpenVPN
+RUN apt-get install -y openvpn
+
+# Adds user0 for SSH
+RUN useradd -ms /bin/bash user0
+# Creates a home directory for the user and ensures
+# that bash is the default shell.
+#USER user0
+#WORKDIR /home/user0
+
+WORKDIR /root

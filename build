@@ -1,6 +1,7 @@
 #!/bin/bash
 
 docker build -t alxprd/pagekite -f docker/Dockerfile.pagekite ./docker
+docker build -t alxprd/pagekite-full -f docker/Dockerfile.full ./docker
 
 docker build -t alxprd/ssh-client -f docker/Dockerfile.ssh-client ./docker
 

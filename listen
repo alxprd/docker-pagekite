@@ -12,4 +12,4 @@ docker run --rm -it \
     --cap-add=NET_ADMIN \
     --device=/dev/net/tun \
     --name pagekite \
-    alxprd/pagekite /scripts/start $1 $2
+    alxprd/pagekite-full /scripts/start $1 $2
