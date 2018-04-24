@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run --rm -it \
+    -v $PWD/scripts/:/scripts/ \
+    --net=container:pagekite \
+    --name ssh-server \
+    alxprd/ssh-server \
+    /scripts/start-ssh-server

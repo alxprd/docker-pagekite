@@ -1,8 +1,8 @@
 #!/bin/bash
 
 docker build -t alxprd/pagekite -f docker/Dockerfile.pagekite ./docker
-docker build -t alxprd/pagekite-full -f docker/Dockerfile.full ./docker
+docker build -t alxprd/ssh-server -f docker/Dockerfile.ssh-server ./docker
+docker build -t alxprd/vpn-server -f docker/Dockerfile.vpn-server ./docker
 
 docker build -t alxprd/ssh-client -f docker/Dockerfile.ssh-client ./docker
-
 docker build -t alxprd/vpn-client -f docker/Dockerfile.vpn-client ./docker

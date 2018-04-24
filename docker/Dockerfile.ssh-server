@@ -1,8 +1,5 @@
 FROM alxprd/pagekite 
 
-# Install OpenVPN
-RUN apt-get install -y openvpn
-
 # Install SSH server
 RUN apt-get install -y openssh-server
 
@@ -12,5 +9,3 @@ RUN useradd -ms /bin/bash user0
 # that bash is the default shell.
 #USER user0
 #WORKDIR /home/user0
-
-WORKDIR /root

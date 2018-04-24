@@ -15,18 +15,3 @@ RUN apt-get update
 
 # Install pagekite!
 RUN apt-get install -y pagekite
-
-# Install SSH server
-RUN apt-get install -y openssh-server
-
-# Install OpenVPN
-RUN apt-get install -y openvpn
-
-# Adds user0 for SSH
-RUN useradd -ms /bin/bash user0
-# Creates a home directory for the user and ensures
-# that bash is the default shell.
-#USER user0
-#WORKDIR /home/user0
-
-WORKDIR /root

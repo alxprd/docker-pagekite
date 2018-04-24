@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pagekite --add 80 $1.pagekite.me AND 22 ssh:$1.pagekite.me AND 1194 raw:$1.pagekite.me:1194
+
+pagekite

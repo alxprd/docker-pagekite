@@ -1,0 +1,4 @@
+FROM alxprd/pagekite 
+
+# Install OpenVPN
+RUN apt-get install -y openvpn

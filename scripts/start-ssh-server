@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Set SSH password:"
+passwd user0
+
+service ssh start
+
+echo "SERVICE STARTED!" > /var/log/auth.log
+
+tail -f /var/log/auth.log -n 100

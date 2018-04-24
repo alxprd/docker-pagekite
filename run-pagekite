@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# != 1 ]; then
+    echo "Pagekite name missing... (ex. listen kitename)"
+    exit 1
+fi
+
+docker run --rm -it \
+    -v $PWD/user/:/root/ \
+    -v $PWD/scripts/:/scripts/ \
+    --name pagekite \
+    alxprd/pagekite \
+    /scripts/start-pagekite $1

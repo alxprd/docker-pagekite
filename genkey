@@ -2,4 +2,4 @@
 
 docker run --rm -it \
     -v $PWD/user/:/root/ \
-    alxprd/pagekite-full openvpn --genkey --secret /root/static.key
+    alxprd/vpn-server openvpn --genkey --secret /root/static.key

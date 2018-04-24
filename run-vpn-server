@@ -1,0 +1,11 @@
+#!/bin/bash
+
+docker run --rm -it \
+    -v $PWD/user/:/root/ \
+    -v $PWD/scripts/:/scripts/ \
+    --cap-add=NET_ADMIN \
+    --device=/dev/net/tun \
+    --net=container:pagekite \
+    --name vpn-server \
+    alxprd/vpn-server \
+    /scripts/start-vpn-server
