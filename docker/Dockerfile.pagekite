@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --no-cache bash curl python
+RUN apk add --no-cache curl python py-openssl
 
 RUN curl -O https://pagekite.net/pk/pagekite.py
 
