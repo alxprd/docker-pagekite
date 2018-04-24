@@ -1,3 +1,6 @@
 #!/bin/bash
 
+festival --version
+
 ncat -l 2000 -v -k -c "festival --tts --language 'spanish'"
+#festival --server
