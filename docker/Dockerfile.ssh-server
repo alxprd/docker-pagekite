@@ -1,4 +1,7 @@
-FROM alxprd/pagekite 
+FROM debian:stretch
+
+
+RUN apt-get update
 
 # Install SSH server
 RUN apt-get install -y openssh-server

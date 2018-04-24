@@ -1,0 +1,9 @@
+FROM alpine
+
+RUN apk add --update --no-cache curl python go
+
+RUN curl -O https://pagekite.net/pk/pagekite.py
+
+RUN chmod +x pagekite.py
+
+RUN mv pagekite.py /usr/local/bin/pagekite
