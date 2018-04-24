@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run -it --rm \
+    -v $PWD/scripts/:/scripts/ \
+    --name say \
+    --net=container:vpn-client \
+    alxprd/say \
+    /scripts/say "$*"

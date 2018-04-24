@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run -it --rm \
+    --name listen \
+    --net=container:vpn-server \
+    alxprd/listen \
+    ncat -l 2000 -k
+#   ncat -l 2000 -k -c 'xargs -n1 echo'

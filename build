@@ -6,3 +6,6 @@ docker build -t alxprd/vpn-server -f docker/Dockerfile.vpn-server ./docker
 
 docker build -t alxprd/ssh-client -f docker/Dockerfile.ssh-client ./docker
 docker build -t alxprd/vpn-client -f docker/Dockerfile.vpn-client ./docker
+
+docker build -t alxprd/listen -f docker/Dockerfile.listen ./docker
+docker build -t alxprd/say -f docker/Dockerfile.say ./docker
